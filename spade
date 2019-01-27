@@ -1,7 +1,4 @@
 #!/bin/bash
-	typeset -i mihai_age=19
-	typeset -i josel_age=19
-
 	today=$(date +"%A, %B %d %Y")
 
 	echo "Hello Mihai!!"
