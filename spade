@@ -1,0 +1,85 @@
+#!/bin/bash
+	typeset -i mihai_age=19
+	typeset -i josel_age=19
+
+	today=$(date +"%A, %B %d %Y")
+
+	echo "Hello Mihai!!"
+	echo #
+	echo "It's $today,"
+
+	if echo $today | grep -i 'october 31' >/dev/null 2>&1
+	then
+		echo "Happy Halloween!!"
+		echo #
+	elif echo $today | grep -i 'december 24' >/dev/null 2>&1
+	then
+		echo "Merry Christmas Eve!!"
+		echo #
+	elif echo $today | grep -i 'december 25' >/dev/null 2>&1
+	then
+		echo "Merry Christmas!!"
+		echo #
+	elif echo $today | grep -i 'december 31' >/dev/null 2>&1
+	then
+		echo "Happy New Years Eve!!"
+		echo #
+	elif echo $today | grep -i 'January 01' >/dev/null 2>&1
+	then
+		echo "Happy New Year!!"
+		echo #
+	elif echo $today | grep -i 'april 01' >/dev/null 2>&1
+	then
+		echo "Happy April Fools!!"
+		echo #
+	else
+		echo "Just an average day,"
+		echo #
+	fi
+
+	echo "Do you need to connect to school or work on the website?"
+	echo #
+	while read answer
+	do
+		if echo $answer | grep -i 'school' >/dev/null 2>&1
+		then
+			echo #
+			echo -n "Okay, connecting you to school."
+			sleep .5
+			echo -n "."
+			sleep .5
+			echo -n "."
+			echo #
+			echo #
+			sshpass -p "password" ssh "ipaddress"
+			echo #
+			echo "Welcome back!!"
+			echo #
+			break
+		elif echo $answer | grep -i 'website' >/dev/null 2>&1
+		then
+			echo #
+			echo -n "Okay, connecting you to the DigitalOcean servers."
+			sleep .5
+			echo -n "."
+			sleep .5
+			echo -n "."
+			echo #
+			echo #
+			sshpass -p "password" ssh "ipaddress"
+			echo #
+			echo "Welcome back!!"
+			echo #
+			break
+		elif echo $answer | grep -i 'neither' >/dev/null 2>&1 
+		then
+			echo #
+			echo "Okay then, have a good day!!"
+			echo #
+			break
+		else
+			echo "I don't understand what you said"
+			echo #
+			continue
+		fi
+	done
