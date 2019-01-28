@@ -1,2 +1,2 @@
 # Spade
-A Shell Script Program to help travesre through the Linux Operating System
+A Shell Script Program to help connect to various Linux/Unix servers
