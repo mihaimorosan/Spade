@@ -48,7 +48,7 @@
 			echo -n "."
 			echo #
 			echo #
-			sshpass -p "password" ssh "ipaddress"
+			sshpass -p "password" ssh "hostname"
 			echo #
 			echo "Welcome back!!"
 			echo #
@@ -63,7 +63,7 @@
 			echo -n "."
 			echo #
 			echo #
-			sshpass -p "password" ssh "ipaddress"
+			sshpass -p "password" ssh "hostname"
 			echo #
 			echo "Welcome back!!"
 			echo #
